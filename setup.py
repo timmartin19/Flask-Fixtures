@@ -33,7 +33,7 @@ except ImportError:
     install_requires.append('importlib')
 
 setup(
-    name='Flask-Fixtures',
+    name='vk-Flask-Fixtures',
     version='0.3.4',
     url='https://github.com/croach/Flask-Fixtures',
     license='MIT License',

@@ -6,3 +6,11 @@
 *~
 
 .tox
+
+.idea/
+
+build/
+
+dist/
+
+.cache/

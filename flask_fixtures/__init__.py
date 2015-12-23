@@ -64,7 +64,9 @@ def setup(obj):
 def teardown(obj):
     log.info('tearing down fixtures...')
     obj.db.session.expunge_all()
-    obj.db.drop_all()
+    for table in reversed(obj.db.metadata.sorted_tables):
+        obj.db.engine.execute(table.delete())
+    obj.db.session.commit()
 
 
 def load_fixtures(db, fixtures):
